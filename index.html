@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nikos Fotiou">
+    <title>ExcID</title>    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.png">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-footer-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/css/carousel.css" rel="stylesheet">
+  </head>
+<body>   
+<header>
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #ffffff;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/img/logo.svg" height="60"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="didself.html">did:self</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/img/index/iam.jpg" class="d-block w-100 h-100" alt="Identity and Access Management">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Secure your valuable assets</h1>
+            <p>IAM using emerging, privacy-preserving technologies</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/img/index/iot.jpg" class="d-block w-100 h-100" alt="Access control for the IoT">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Unleash the power of IoT</h1>
+            <p>Share your IoT generated data in a secure and controllable way</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/img/index/passport.jpg" class="d-block w-100 h-100" alt="Digital Identities">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Embrace digital identities</h1>
+            <p>Digitize your identities and credentials and integrate them into the cyber world</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container px-4 pb-2 pt-2" id="services">
+    <h2 class="pb-2 border-bottom">Services</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="/img/icons/oauth/icon-credential-user.svg" width="40px" height="40px"/>
+        </div>
+        <div>
+          <h2>Self-Sovereign Identity</h2>
+          <p>We enable solutions that leverage <a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers</a> (DIDs) and
+            <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials</a> (VCs), which are W3C recommendations. We develop
+            systems for managing the lifecycle of DIDs and VCs, including issuance, presentation, and storage.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="/img/icons/oauth/icon-security.svg" width="40px" height="40px"/>
+        </div>
+        <div>
+          <h2>Access Control</h2>
+          <p>We provide Attribute-based and Capabilities-based access control solutions. We enable transparent protection
+            of Web resources and IoT devices. Our solutions enable controlled, decentralized, and secure of Internet resources.
+          </p>
+          
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="/img/icons/oauth/icon-api.svg" width="40px" height="40px"/>
+        </div>
+        <div>
+          <h2>Integration</h2>
+          <p>We enable the integration of emerging digital identity specifications (e.g., DIDs, VCs, eIDAS) with existing
+            systems and Web applications. We develop solutions based on industry standards, including OAuth 2.0 and OpenID
+           connect.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container px-4 py-2" id="about">
+    <h2 class="pb-2 border-bottom">About</h2>
+      <p>ExcID is a spin-off of the <a href="https://www.aueb.gr/en">Athens University of Economics and Business</a>. 
+      ExcID pursues identity and data-centric solutions to many Internet problems, 
+      mostly focusing on security and privacy, but also more generally, while making sure 
+      that security and privacy are supported by design from the outset.
+      </p>
+    <!-- /.row -->
+  </div>
+
+  <footer class="container border-top py-5 my-5">
+    <div class="row">
+      <div class="col">
+          <img src="img/icons/bootstrap/envelope.svg" alt="contact us" width="30px" height="30px">
+          
+        <p><b>Address:</b><br/>
+          Trias 2 (#209)<br/>
+          Athens 113 62<br/>
+           Greece</p>
+          <p><b>Email:</b><br/>
+            info@excid.io</p>
+      </div>
+      <div class="col">
+       <a href="https://github.com/excid-io" class="text-decoration-none">
+        <img src="img/icons/bootstrap/github.svg" alt="github" width="20px" height="20px"/>
+       </a>
+       <a href="https://www.linkedin.com/company/excid-io/" class="text-decoration-none">
+        <img src="img/icons/bootstrap/linkedin.svg" alt="linkedin" width="20px" height="20px"/>
+       </a>
+       <a href="https://twitter.com/excid_io" class="text-decoration-none">
+        <img src="img/icons/bootstrap/twitter.svg" alt="twitter" width="20px" height="20px"/>
+       </a>
+    </div>
+  </div>
+  <p class="text-center"> 
+    &copy; 2023 Internet Identity Security and Privacy Solutions P.C. (ExcID)<br/>
+  Reg. number 165194301000</p>
+  </footer>
+</main>
+<script src="/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
