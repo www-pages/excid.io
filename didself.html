@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nikos Fotiou">
+    <title>ExcID - did:self method</title>    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.png">
+  </head>
+<body>   
+<header>
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #ffffff;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/img/logo.svg" height="60"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="didself.html">did:self</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+    <div class="container py-5 mt-5">
+        <div class="p-5 my-4 bg-light border rounded-3" >
+            <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">did:self</h1>
+            <p class="col fs-4">
+                A method for <i>Decentralized Identifiers</i> that does not require a secure registry (e.g., a blockchain
+                or a Web server) and allows private key rotation.
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-2" id="about">
+        
+        <h2 class="pb-2 border-bottom">About</h2>
+          <p>
+            Decentralized Identifiers (DIDs) are a <a href="https://www.w3.org/TR/did-core/">W3C recommendation</a>
+            that <i>enables verifiable, decentralized digital identity</i>. DIDs are investigated for providing
+            <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/EBSIDOC/EBSI+DID+Method">self-sovereign
+            digital identities</a>, for <a href="https://medium.com/transmute-techtalk/transmute-tech-school-101-decentralized-identifiers-provide-secure-supply-chain-visibility-ba9f48654c14">
+            improving supply chain security</a>, or even as a <a href="https://developer.tbd.website/projects/web5/">Web5 enabler</a>.
+            Current W3C recommendations act as a framework, which is implemented by many <i>DID methods</i>. Existing DID methods
+            either require a form a <i>trusted registry</i> (such as a blockchain or a secure Web server) where auxillary 
+            information is stored, or they do not support private key rotation. <span class="font-monospace">did:self</span> is
+            the first DID method that removes the need for a <i>trusted registry</i> allowing at the same time 
+            advanced operations such as: <i>private key rotation</i>, <i>DID co-ownership</i>, and <i>DID delegation</i>.
+
+          </p>
+        <!-- /.row -->
+    </div>  
+    
+    <div class="container my-2 px-4" id="usecases">
+    <h2 class="pb-2 border-bottom">Use cases</h2>
+    <div class="row">
+        <div class="col-sm">
+            <div class="card mx-2" style="height:100%;">
+                <img src="img/didself/iot.jpg" class="card-img-top" alt="IoT group communication">
+                <div class="card-body">
+                    <h5>IoT group communication</h5>
+                    <p class="card-text">Using <span class="font-monospace">did:self</span> IoT devices belonging to the same <i>group</i> (e.g.,
+                      all temperature sensors of a building) can be configured with the same DID
+                      identifier. This way group membership can be easily proved. At the same time,
+                      each IoT device can have its own private key that can be trivially rotated. This
+                      protects the group from private key breaches.
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card mx-2" style="height:100%;">
+                <img src="img/didself/data.jpg" class="card-img-top" alt="Data identification">
+                <div class="card-body">
+                    <h5>Data identification</h5>
+                    <p class="card-text">A <span class="font-monospace">did:self</span> identifier can be used for
+                      identifying content items or service endpoints. <span class="font-monospace">did:self</span>
+                      allows secure delegation of content/service to 3<sup>rd</sup> party providers (e.g., a CDN).
+                      At the same time, <span class="font-monospace">did:self</span> enables <i>self-verifiable</i>
+                      content items, i.e., the <i>authenticity</i> of an item can be verified without support
+                      from a Trusted Third Party.  
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card mx-2" style="height:100%;">
+                <img src="img/didself/devices.jpg" class="card-img-top" alt="Data identification">
+                <div class="card-body">
+                    <h5>Device handover</h5>
+                    <p class="card-text">A <span class="font-monospace">did:self</span> identifier can be used
+                      with multiple user devices. At the same time, a user can limit the validity period of 
+                      keys used in less secure devices. For example, users can configure their mobile phones
+                      to use their <span class="font-monospace">did:self</span> identifier only for the duration
+                      of a business trip. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+    <div class="container my-4 px-4" id="Learn more">
+    <h2 class="pb-2 border-bottom">Learn more</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2 justify-content-center">
+            <div class="col d-flex align-items-start p-5">
+                <div class="icon-square me-3">
+                    <img src="img/icons/bootstrap/architecture.svg" alt="specifications" width="40px" height="40px"/>
+                </div>
+                <div>
+                <h3 class="fs-2">Specifications</h3>
+                <p>Read <span class="font-monospace">did:self</span> specifications. Learn how to 
+                 construct and protect a <span class="font-monospace">did:self</span> identifier.</p>
+                <a href="https://github.com/excid-io/did-self" target="_blank" class="btn btn-outline-secondary">
+                    View it on GitHub
+                </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start p-5">
+                <div class="icon-square me-3">
+                    <img src="img/icons/bootstrap/handyman.svg" alt="specifications" width="40px" height="40px"/>
+                </div>
+                <div>
+                <h3 class="fs-2">Develop</h3>
+                <p>Get started with our Python implementation of <span class="font-monospace">did:self</span>. Create, manage, 
+                  and verify <span class="font-monospace">did:self</span> identifiers.</p>
+                <a href="https://github.com/excid-io/did-self-py" target="_blank" class="btn btn-outline-secondary">
+                    View it on GitHub
+                </a>
+                </div>
+            </div>
+        </div>
+  </div>  
+
+  <footer class="container border-top py-5 my-5">
+    <div class="row">
+      <div class="col">
+          <img src="img/icons/bootstrap/envelope.svg" alt="contact us" width="30px" height="30px">
+          
+        <p><b>Address:</b><br/>
+          Trias 2 (#209)<br/>
+          Athens 113 62<br/>
+           Greece</p>
+          <p><b>Email:</b><br/>
+            info@excid.io</p>
+      </div>
+      <div class="col">
+       <a href="https://github.com/excid-io" class="text-decoration-none">
+        <img src="img/icons/bootstrap/github.svg" alt="github" width="20px" height="20px"/>
+       </a>
+       <a href="https://www.linkedin.com/company/excid-io/" class="text-decoration-none">
+        <img src="img/icons/bootstrap/linkedin.svg" alt="linkedin" width="20px" height="20px"/>
+       </a>
+       <a href="https://twitter.com/excid_io" class="text-decoration-none">
+        <img src="img/icons/bootstrap/twitter.svg" alt="twitter" width="20px" height="20px"/>
+       </a>
+    </div>
+  </div>
+  <p class="text-center"> 
+    &copy; 2023 Internet Identity Security and Privacy Solutions P.C. (ExcID)<br/>
+  Reg. number 165194301000</p>
+  </footer>
+</main>
+<script src="/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
