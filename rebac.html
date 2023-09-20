@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nikos Fotiou">
+    <title>ExcID - Access control solutions</title>    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.png">
+  </head>
+<body>   
+<header>
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #ffffff;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/img/logo.svg" height="60"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+    <div class="container py-5 mt-5">
+        <div class="p-5 my-4 bg-light border rounded-3" >
+            <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Improved access control</h1>
+            <p class="col fs-4">
+                State of the art access control for decentralized HTTP services. Fine-grained trust management with business workflow integration 
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-2" id="about">
+        
+        <h2 class="pb-2 border-bottom">In a nutshell</h2>
+          <p>
+            ExcID integrates <a href="https://openfga.dev/">OpenFGA</a>, an open source implementation of <a href="https://research.google/pubs/pub48190/">Zanzibar</a>, which is Google's authorization system
+            protecting YouTube, Drive, and other Google's services. ExcID's solution allows administrators to determine the access rights of their users and 
+            issue <em>authorizations</em> in the form of <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials</a>. Users can store their authorizations in their <em>wallet</em> of choice, 
+            including ExcID's own web-based wallet. Users can then use their wallet to gain access to protected resources in a secure and privacy-preserving way. ExcID's solution is based on
+            ongoing work by W3C, IETF, and OpenID foundation. 
+          </p>
+        <!-- /.row -->
+    </div>  
+    
+    <div class="container my-2 px-4" id="usecases">
+    <h2 class="pb-2 border-bottom">Key properties</h2>
+    <div class="row">
+        <div class="col-sm">
+            <div class="card mx-2" style="height:100%;">
+                <img src="img/rebac/business.png" class="card-img-top" alt="Integrate business relationships">
+                <div class="card-body">
+                    <h5>Integrate business relationships</h5>
+                    <p class="card-text">Model business relationships directly in your authorization
+                      model and implement in a seamless and straightforward way workflows such as
+                      <em>delegation</em> and <em>group authorization</em>.   
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card mx-2" style="height:100%;">
+                <img src="img/rebac/relations.png" class="card-img-top" alt="Transitive access rights" >
+                <div class="card-body">
+                    <h5>Transitive access rights</h5>
+                    <p class="card-text">Organize access control <em>objects</em> using relationships,
+                      e.g., <code>Smart Lamp1 <em>is located in</em> Smart Home1</code> and parametrize
+                      your authorization model based on these relationships, e.g., <code>A user that can 
+                      access Smart Home1, can access anything <em>located in it</em></code>
+                      </em>  
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card mx-2" style="height:100%;">
+                <img src="img/rebac/interoperability.png" class="card-img-top" alt="Improved management and interoperability">
+                <div class="card-body">
+                    <h5>Improved management and interoperability</h5>
+                    <p class="card-text">You can revoke any authorization instantly. Our <em>policy decision point</em>
+                      can check revocation status with every request. Similarly, you can implement zero-trust systems by enabling
+                      continuous authorization. Our solution allows businesses to federate and implement access control
+                      based on authorization issued by anybody from the federation.  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+    <div class="container my-4 px-4" id="Learn more">
+    <h2 class="pb-2 border-bottom">Learn more</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2 ">
+            <div class="col d-flex align-items-start p-5">
+                <div class="icon-square me-3">
+                    <img src="img/icons/bootstrap/book.svg" alt="articles" width="40px" height="40px"/>
+                </div>
+                <div>
+                <h3 class="fs-2">Articles</h3>
+                <p>Read how our system is used for protecting digital twins.</p>
+                <a href="https://medium.com/@excid/relation-based-access-control-using-verifiable-credentials-d8e542a0ce1" target="_blank" class="btn btn-outline-secondary">
+                    Read it on medium
+                </a>
+                </div>
+            </div>
+        </div>
+  </div>  
+
+  <footer class="container border-top py-5 my-5">
+    <div class="row">
+      <div class="col">
+          <img src="img/icons/bootstrap/envelope.svg" alt="contact us" width="30px" height="30px">
+          
+        <p><b>Address:</b><br/>
+          Trias 2 (#209)<br/>
+          Athens 113 62<br/>
+           Greece</p>
+          <p><b>Email:</b><br/>
+            info@excid.io</p>
+      </div>
+      <div class="col">
+       <a href="https://github.com/excid-io" class="text-decoration-none">
+        <img src="img/icons/bootstrap/github.svg" alt="github" width="20px" height="20px"/>
+       </a>
+       <a href="https://www.linkedin.com/company/excid-io/" class="text-decoration-none">
+        <img src="img/icons/bootstrap/linkedin.svg" alt="linkedin" width="20px" height="20px"/>
+       </a>
+       <a href="https://twitter.com/excid_io" class="text-decoration-none">
+        <img src="img/icons/bootstrap/twitter.svg" alt="twitter" width="20px" height="20px"/>
+       </a>
+       <a href="https://medium.com/@excid" class="text-decoration-none">
+        <img src="img/icons/bootstrap/medium.svg" alt="medium" width="20px" height="20px"/>
+       </a>
+    </div>
+  </div>
+  <p class="text-center"> 
+    &copy; 2023 Internet Identity Security and Privacy Solutions P.C. (ExcID)<br/>
+  Reg. number 165194301000</p>
+  </footer>
+</main>
+<script src="/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
