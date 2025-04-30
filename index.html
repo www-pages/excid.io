@@ -5,203 +5,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Nikos Fotiou">
     <title>ExcID</title>    
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" href="/img/favicon.png">
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .b-footer-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('/img/herobg.jpg') center/cover no-repeat;
+        color: white;
+        min-height: 50vh; /* Smaller hero section */
         display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
+        align-items: center;
         text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
       }
+    
+      .hero-section h1, .hero-section h3 {
+        animation: fadeInUp 1s ease forwards;
+      }
+    
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .feature-section {
+        width: 100%;
+        padding-bottom:2em;
+        margin: 0; /* remove any margin */
+      }
+
+      .feature-section h3 {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .feature-section ul li {
+        margin-bottom: 0.75rem;
+      }
+
+      .feature-section a.icon-link {
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        transition: color 0.2s ease;
+      }
+
+      .feature-section a.icon-link:hover {
+        color: #198754; /* Bootstrap success green */
+      }
+
+      .feature-image {
+        width:100%;
+        object-fit: contain; /* Prevent stretching */
+        border-radius: 0.75rem;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(to bottom right, #f8f9fa, #ffff); /* adjust colors as needed */
+      }
+
+      .gradient-bg-rv {
+        background: linear-gradient(to top left, #e8fbe3, #ffff); /* adjust colors as needed */
+      }
+
+      .no-padding-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+
     </style>
-    <!-- Custom styles for this template -->
-    <link href="/css/carousel.css" rel="stylesheet">
   </head>
 <body>   
-<header>
-  <nav class="navbar navbar-expand-md fixed-top" style="background-color: #ffffff;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/img/logo.svg" height="60"/></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link " href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item" >
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item" >
-            <a class="nav-link" href="careers.html">Careers</a>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="/img/logo.svg" alt="ExcID Logo" height="50" class="me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="careers.html">Careers</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<main>
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="position-relative overflow-hidden hero-section">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welcome to ExcID</h1> <!-- Slightly smaller text -->
+    <h3 class="fw-normal mb-4">We enable secure B2B services</h3>
+  </div>
+</div>
+
+<div class="feature-section" id="services">
+  <div class="row align-items-center flex-md-row-reverse  gradient-bg">
+    <div class="col-lg-3 d-flex align-items-center p-3">
+      <img src="/img/access.png" alt="Access Control Illustration" class="feature-image">
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/img/index/iam.jpg" class="d-block w-100 h-100" alt="Identity and Access Management">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Secure your valuable assets</h1>
-            <p>IAM using emerging, privacy-preserving technologies</p>
-          </div>
+    <div class="col-lg-9 p-5">
+      <div class="row">
+        <!-- Left column: header, paragraph, links -->
+        <div class="col-md-8">
+          <h1 class="display-4">Authentication and Access Control</h1>
+          <p class="lead">
+            ExcID develops systems for protecting web-based APIs. Our solutions are designed to meet the needs of modern B2B services by providing robust security and flexible access management.
+          </p>
+          <p>
+            Learn more about our 
+            <a class="icon-link icon-link-hover" href="didself.html">
+              Decentralized Identifier solution
+              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
+          </p>
+          <p>
+            Learn more about our 
+            <a class="icon-link icon-link-hover" href="rebac.html">
+              Access Control solution
+              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
+          </p>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/img/index/iot.jpg" class="d-block w-100 h-100" alt="Access control for the IoT">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Unleash the power of IoT</h1>
-            <p>Share your IoT generated data in a secure and controllable way</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/img/index/passport.jpg" class="d-block w-100 h-100" alt="Digital Identities">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Embrace digital identities</h1>
-            <p>Digitize your identities and credentials and integrate them into the cyber world</p>
-          </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <ul class="list-unstyled lead mb-0">
+            <li><i class="bi bi-check2-square text-success me-2"></i>Fine-grained access control based on policies that reflect business relationships and roles</li>
+            <li><i class="bi bi-check2-square text-success me-2"></i>Decentralized identity management within the administrative domains of enterprises</li>
+            <li><i class="bi bi-check2-square text-success me-2"></i>Secure cross-business authentication and authorization</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container px-4 pb-2 pt-2" id="services">
-    <h2 class="pb-2 border-bottom">Services</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="/img/icons/oauth/icon-credential-user.svg" width="40px" height="40px"/>
-        </div>
-        <div>
-          <h2>Self-Sovereign Identity</h2>
-          <p>We enable solutions that leverage <a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers</a> (DIDs) and
-            <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials</a> (VCs), which are W3C recommendations. We develop
-            systems for managing the lifecycle of DIDs and VCs, including issuance, presentation, and storage.
-            Learn more about our <a href="didself.html">DID solution</a>.
+<div class="feature-section " id="transparency">
+  <div class="row align-items-center g-0 no-padding-container">
+    <div class="col-lg-3 d-flex align-items-center p-3">
+      <img src="/img/transparency.png" alt="Transparency and Traceability Illustration" class="feature-image">
+    </div>
+    <div class="col-lg-9 p-5">
+      <div class="row">
+        <!-- Left column: header, paragraph, links -->
+        <div class="col-md-8">
+          <h1 class="display-4">Transparency and Traceability</h1>
+          <p class="lead">
+            ExcID develops and integrates traceability and transparency solutions that seamlessly embed into software supply chains, 
+            enabling continuous monitoring of security events and robust protection against cyber threats.
+          </p>
+          <p>
+            Learn more about our open source
+            <a class="icon-link icon-link-hover" href="thttps://staas.excid.io">
+              Software Transparency as a Service platform
+              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
           </p>
         </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="/img/icons/oauth/icon-security.svg" width="40px" height="40px"/>
-        </div>
-        <div>
-          <h2>Access Control</h2>
-          <p>We provide Attribute-based and Capabilities-based access control solutions. We enable transparent protection
-            of Web resources and IoT devices. Our solutions enable controlled, decentralized, and secure of Internet resources.
-            Learn more about our <a href="rebac.html">access control solution</a>.
-          </p>
-          
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="/img/icons/oauth/icon-actions.svg" width="40px" height="40px"/>
-        </div>
-        <div>
-          <h2>Traceability and Transparency</h2>
-          <p>We develop Traceability and Transparency solutions. You can use our free, open-source
-             <a href="https://staas.excid.io">Software Transparency as a Service</a> platform that
-             allows for digitally signing artifacts and registering them in a Transparency
-             Registry.
-          </p>
-          
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="/img/icons/oauth/icon-cloud.svg" width="40px" height="40px"/>
-        </div>
-        <div>
-          <h2>Data Spaces</h2>
-          <p>We are doing research related to the emerging domain of data spaces. We focus on privacy and 
-            access control and we develop solutions that allow secure, decentralized data sharing. 
-          </p>
-          
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="/img/icons/oauth/icon-api.svg" width="40px" height="40px"/>
-        </div>
-        <div>
-          <h2>Integration</h2>
-          <p>We enable the integration of emerging digital identity specifications (e.g., DIDs, VCs, eIDAS) with existing
-            systems and Web applications. We develop solutions based on industry standards, including OAuth 2.0 and OpenID
-           connect.</p>
+        <div class="col-md-4 d-flex align-items-center">
+          <ul class="list-unstyled lead mb-0">
+            <li><i class="bi bi-check2-square text-success me-2"></i>Keyless digital signatures</li>
+            <li><i class="bi bi-check2-square text-success me-2"></i>Integration with existing CI/CD services</li>
+            <li><i class="bi bi-check2-square text-success me-2"></i>Support for both public and private transparency registries</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  
-  <div class="container px-4 py-2" id="about">
-    <h2 class="pb-2 border-bottom">About</h2>
-      <p>ExcID is a spin-off of the <a href="https://www.aueb.gr/en">Athens University of Economics and Business</a>. 
-      ExcID pursues identity and data-centric solutions to many Internet problems, 
-      mostly focusing on security and privacy, but also more generally, while making sure 
-      that security and privacy are supported by design from the outset.
+</div>
+
+<div class="feature-section" id="merged-features">
+  <div class="row g-5 px-4 py-5 gradient-bg-rv">
+    <div class="col-lg-8">
+      <h1>Cyber Resilience <span class="badge text-bg-success"">New</span> </h1>
+      <p class="lead">
+        🚀 ExcID participates in the CRACY project, a pioneering initiative designed to help businesses meet the requirements of the EU Cyber Resilience Act (CRA) effortlessly.
       </p>
-    <!-- /.row -->
+      <p>
+        A new portal will soon provide more information about CRA and how CRACY can help you achieve compliance.
+      </p>
+      <p>
+        <a class="icon-link icon-link-hover" href="https://cra-cy.eu/">
+          Learn more about CRACY
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>
+        </a>
+      </p>
+    </div>
+    <div class="col-lg-4 d-flex align-items-center p-3">
+      <img src="/img/cracy.png" alt="CRACY logo" class="feature-image">
+    </div>
+
   </div>
+</div>
+
+ 
+
 
   <footer class="container border-top py-5 my-5">
     <div class="row">
@@ -231,7 +247,7 @@
     </div>
   </div>
   <p class="text-center"> 
-    &copy; 2024 Internet Identity Security and Privacy Solutions P.C. (ExcID)<br/>
+    &copy; 2025 Internet Identity Security and Privacy Solutions P.C. (ExcID)<br/>
   Reg. number 165194301000</p>
   </footer>
 </main>
