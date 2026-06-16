@@ -74,6 +74,80 @@
         max-width: 100% !important;
       }
 
+      .services-section {
+        background:
+          linear-gradient(135deg, rgba(25, 135, 84, 0.08), rgba(13, 110, 253, 0.06)),
+          #f8f9fa;
+      }
+
+      .services-kicker {
+        color: #198754;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .services-intro {
+        max-width: 760px;
+      }
+
+      .service-card {
+        height: 100%;
+        border: 1px solid rgba(33, 37, 41, 0.08);
+        border-radius: 0.5rem;
+        background: #fff;
+        box-shadow: 0 1rem 2.5rem rgba(33, 37, 41, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .service-card:hover {
+        border-color: rgba(25, 135, 84, 0.35);
+        box-shadow: 0 1.25rem 3rem rgba(33, 37, 41, 0.12);
+        transform: translateY(-4px);
+      }
+
+      .service-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #198754;
+        background: rgba(25, 135, 84, 0.12);
+        font-size: 1.35rem;
+      }
+
+      .service-card ul li {
+        display: flex;
+        gap: 0.55rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .service-card ul i {
+        margin-top: 0.15rem;
+      }
+
+      .service-card .icon-link {
+        color: #198754;
+        text-decoration: none;
+      }
+
+      .service-card .icon-link:hover {
+        color: #146c43;
+      }
+
+      .service-highlight {
+        background: #101820;
+        border-radius: 0.5rem;
+        color: #fff;
+      }
+
+      .service-highlight .btn {
+        white-space: nowrap;
+      }
+
     </style>
   </head>
 <body>   
@@ -103,116 +177,107 @@
     </nav>
   </header>
 
+<main>
 <div class="position-relative overflow-hidden hero-section">
   <div class="container">
     <h1 class="display-4 fw-bold">Welcome to ExcID</h1> <!-- Slightly smaller text -->
-    <h3 class="fw-normal mb-4">We enable secure B2B services</h3>
+    <h3 class="fw-normal mb-4">Your Cyber Resilience Partner</h3>
   </div>
 </div>
 
-<div class="feature-section gradient-bg" id="services">
-  <div class="row align-items-center flex-md-row-reverse">
-    <div class="col-lg-3 d-flex align-items-center p-3">
-      <img src="/img/access.png" alt="Access Control Illustration" class="feature-image">
+<div class="feature-section services-section" id="services">
+  <div class="container">
+    <div class="services-intro mb-5">
+      <p class="services-kicker mb-2">Services</p>
+      <h1 class="display-5 fw-bold mb-3">Cyber resilience services for products, platforms, and software teams</h1>
+      <p class="lead mb-0">
+        ExcID helps organizations turn security, compliance, and trust requirements into engineering practices that can be deployed, measured, and maintained.
+      </p>
     </div>
-    <div class="col-lg-9 p-5">
-      <div class="row">
-        <!-- Left column: header, paragraph, links -->
-        <div class="col-md-8 pe-5">
-          <h1 class="display-4">Authentication and Access Control</h1>
-          <p class="lead">
-            ExcID develops systems for protecting web-based APIs. Our solutions are designed to meet the needs of modern B2B services by providing robust security and flexible access management.
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <article class="service-card p-4">
+          <span class="service-icon mb-4"><i class="bi bi-shield-check"></i></span>
+          <h2 class="h4 fw-bold mb-3">Governance Risk Compliance</h2>
+          <p class="text-secondary">
+            Connected products, cloud services, and software supply chains face constant attacks while the Cyber Resilience Act (CRA) raises the bar for secure-by-design products, vulnerability handling, updates, and lifecycle evidence.
           </p>
           <p>
-            Learn more about our 
-            <a class="icon-link icon-link-hover" href="didself.html">
-              Decentralized Identifier solution
-              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
-                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-              </svg>
-            </a>
+            ExcID helps teams scope CRA impact, assess gaps, define governance processes, and convert compliance obligations into concrete product and security work.
           </p>
-          <p>
-            Learn more about our 
-            <a class="icon-link icon-link-hover" href="rebac.html">
-              Access Control solution
-              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
-                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-              </svg>
-            </a>
-          </p>
-        </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <ul class="list-unstyled lead mb-0">
-            <li><i class="bi bi-check2-square text-success me-2"></i>Fine-grained access control based on policies that reflect business relationships and roles</li>
-            <li><i class="bi bi-check2-square text-success me-2"></i>Decentralized identity management within the administrative domains of enterprises</li>
-            <li><i class="bi bi-check2-square text-success me-2"></i>Secure cross-business authentication and authorization</li>
+          <ul class="list-unstyled mt-4 mb-4">
+            <li><i class="bi bi-check2-circle text-success"></i><span>CRA readiness and product scoping</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Risk management and compliance gap analysis</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Security-by-design implementation support</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Vulnerability handling and coordinated disclosure</span></li>
           </ul>
-        </div>
+          <a class="icon-link icon-link-hover" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=gDz2Gymre0CbBAHbc-g1P-YT0Ei-dVpIgrippoCpYtZUNzkwRURQM0JNRkNXMzk2VkkxNUZUQkdMMC4u" target="_blank" rel="noopener noreferrer">
+            Schedule a free 15 min. consultation
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-lg-4">
+        <article class="service-card p-4">
+          <span class="service-icon mb-4"><i class="bi bi-diagram-3"></i></span>
+          <h2 class="h4 fw-bold mb-3">Software Supply Chain Security</h2>
+          <p class="text-secondary">
+            Modern software depends on code, packages, build systems, containers, signing keys, and delivery pipelines that often span many organizations. A single compromised dependency or release process can affect many downstream products.
+          </p>
+          <p>
+            ExcID designs and integrates traceability services that make software releases verifiable. ExcID can also help you implement secure software updates for your products
+          </p>
+          <ul class="list-unstyled mt-4 mb-4">
+            <li><i class="bi bi-check2-circle text-success"></i><span>Software bill of materials workflows</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Provenance records and keyless digital signatures</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Integration with existing CI/CD services</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Public and private transparency registries</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Secure and resilient software updates</span></li>
+          </ul>
+          <a class="icon-link icon-link-hover" href="https://staas.excid.io">
+            Explore ExcID's software supply chain solution
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-lg-4">
+        <article class="service-card p-4">
+          <span class="service-icon mb-4"><i class="bi bi-person-lock"></i></span>
+          <h2 class="h4 fw-bold mb-3">Identity and Access Management</h2>
+          <p class="text-secondary">
+            Broken access control remains a critical security risk for interconnected systems. Organizations need precise authorization for users, services, devices, and agents without adding excessive operational overhead.
+          </p>
+          <p>
+            ExcID helps organizations adopt open-source identity solutions and implement fine-grained authorization models, including Relationship-Based Access Control.
+          </p>
+          <ul class="list-unstyled mt-4 mb-4">
+            <li><i class="bi bi-check2-circle text-success"></i><span>Federated identification and delegated authentication</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Relationship-Based Access Control (ReBAC)</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Passkeys and digital wallet integration</span></li>
+            <li><i class="bi bi-check2-circle text-success"></i><span>Verifiable Credentials support</span></li>
+          </ul>
+          <a class="icon-link icon-link-hover" href="rebac.html">
+            Explore ExcID's IAM solution
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </article>
       </div>
     </div>
-  </div>
-</div>
 
-<div class="feature-section " id="transparency">
-  <div class="row align-items-center g-0 no-padding-container">
-    <div class="col-lg-3 d-flex align-items-center p-3">
-      <img src="/img/transparency.png" alt="Transparency and Traceability Illustration" class="feature-image">
-    </div>
-    <div class="col-lg-9 p-5">
-      <div class="row">
-        <!-- Left column: header, paragraph, links -->
-        <div class="col-md-8 pe-5">
-          <h1 class="display-4">Transparency and Traceability</h1>
-          <p class="lead">
-            ExcID develops and integrates traceability and transparency solutions that seamlessly embed into software supply chains, 
-            enabling continuous monitoring of security events and robust protection against cyber threats.
-          </p>
-          <p>
-            Learn more about our open source
-            <a class="icon-link icon-link-hover" href="https://staas.excid.io">
-              Software Transparency as a Service platform
-              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
-                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-              </svg>
-            </a>
-          </p>
-        </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <ul class="list-unstyled lead mb-0">
-            <li><i class="bi bi-check2-square text-success me-2"></i>Keyless digital signatures</li>
-            <li><i class="bi bi-check2-square text-success me-2"></i>Integration with existing CI/CD services</li>
-            <li><i class="bi bi-check2-square text-success me-2"></i>Support for both public and private transparency registries</li>
-          </ul>
-        </div>
+    <div class="service-highlight mt-5 p-4 p-lg-5 d-lg-flex align-items-center justify-content-between">
+      <div class="me-lg-4">
+        <h2 class="h3 fw-bold mb-2">Not sure where to start with CRA?</h2>
+        <p class="mb-0">
+          Book a short, free, 15 min. consultation to map your product, compliance exposure, and practical next steps.
+        </p>
       </div>
+      <a class="btn btn-success mt-4 mt-lg-0" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=gDz2Gymre0CbBAHbc-g1P-YT0Ei-dVpIgrippoCpYtZUNzkwRURQM0JNRkNXMzk2VkkxNUZUQkdMMC4u" target="_blank" rel="noopener noreferrer">
+        Schedule a consultation
+      </a>
     </div>
-  </div>
-</div>
-
-<div class="feature-section gradient-bg-rv" id="merged-features">
-  <div class="row g-5 px-4 py-5">
-    <div class="col-lg-8">
-      <h1>Cyber Resilience <span class="badge text-bg-success"">New</span> </h1>
-      <p class="lead">
-        🚀 ExcID participates in the CRACY project, a pioneering initiative designed to help businesses meet the requirements of the EU Cyber Resilience Act (CRA) effortlessly.
-      </p>
-      <p>
-        A new portal will soon provide more information about CRA and how CRACY can help you achieve compliance.
-      </p>
-      <p>
-        <a class="icon-link icon-link-hover" href="https://cra-cy.eu/">
-          Learn more about CRACY
-          <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
-            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-          </svg>
-        </a>
-      </p>
-    </div>
-    <div class="col-lg-4 d-flex align-items-center p-3">
-      <img src="/img/cracy.png" alt="CRACY logo" class="feature-image">
-    </div>
-
   </div>
 </div>
 
